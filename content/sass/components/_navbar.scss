@@ -1,0 +1,172 @@
+.navbar {
+  box-shadow: 0 0 10px #ddd;
+  background-color: #fff;
+  position: relative;
+  position: relative;
+  margin-bottom: 30px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar__brand {
+    text-align: $start;
+
+    a {
+      color: $blueColor;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 1.6rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 31px;
+    height: 21px;
+    color: red;
+    transition: .3s;
+    transform: rotate(0deg);
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: red;
+      transform: rotate(0deg);
+      transition: $transtion;
+
+    }
+
+    .bar--1 {
+      transform: rotate(0deg);
+      transition: $transtion;
+      transform-origin: right center;
+    }
+
+    .bar--2 {
+      transition: $transtion;
+    }
+
+    .bar--3 {
+      transform: rotate(0);
+      transition: $transtion;
+      transform-origin: right center;
+    }
+  }
+
+  .toggle-btn.open {
+
+    // transform: rotateY(180deg);
+    .bar--1 {
+      transform: rotate(-45deg);
+      transform-origin: right center;
+      position: absolute;
+      top: -2px;
+      right: 0px;
+    }
+
+    .bar--2 {
+      display: none;
+      transform-origin: right center;
+    }
+
+    .bar--3 {
+      transform: rotate(45deg);
+      transform-origin: right center;
+      position: absolute;
+      bottom: -2px;
+      right: 0px;
+    }
+  }
+
+  .navbar__links {
+    ul {
+      display: flex;
+      text-align: $end;
+      // gap: 60px;
+      li {
+        a {
+          color: #040000;
+          transition: $transtion;
+          font-size: 18px;
+          position: relative;
+          padding: 12px 30px;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            background-color: $hoverColor;
+            width: 0;
+            left: 0;
+            top: 0px;
+            transition: .3s;
+          }
+          &:hover{
+            background-color: #FAFAFA;
+            color: $hoverColor;
+            
+          }
+          &:hover::after {
+            color: $hoverColor;
+            width: 100%;
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width:991px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .toggle-btn {
+      display: flex;
+    }
+
+    .navbar__links {
+      opacity: 0;
+      gap: 10px;
+      width: 100%;
+      padding: 5px;
+      transition: all $transtion;
+      max-height: 0;
+
+      ul {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: $start;
+        width: 100%;
+        transition: all $transtion;
+
+
+        li {
+          // text-align: center;
+          padding: 5px 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .navbar__links.active {
+      opacity: 1;
+      margin: 10px 0;
+      transition: $transtion;
+      max-height: 100%;
+    }
+  }
+}
