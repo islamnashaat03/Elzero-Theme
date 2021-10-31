@@ -18,6 +18,24 @@ navButton.addEventListener("click", function () {
     }, 300);
   }
 });
+
+  // START SCROLL TO TOP BUTTON
+  let span = document.querySelector(".up");
+  window.onscroll = () => {
+    if (scrollY >= 800) {
+      span.classList.add("active");
+    } else {
+      span.classList.remove("active");
+    }
+  };
+  span.onclick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
+// END SCROLL TO TOP BUTTON
 }
 
 

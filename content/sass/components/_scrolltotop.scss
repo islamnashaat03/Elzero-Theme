@@ -1,0 +1,27 @@
+.up {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: -40px;
+  background-color:$blueColor ;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 25px;
+  }
+}
+.up.active{
+    right:15px ;
+  
+}
+@media only screen and (max-width:767px) {
+  .up{
+    display: none;
+  }
+}

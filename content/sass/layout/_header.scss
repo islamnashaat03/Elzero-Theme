@@ -1,12 +1,12 @@
 .header {
   position: relative;
-
+  padding-bottom: $padding;
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 30px;
     align-items: center;
-    padding-bottom: 215px;
+    padding-bottom: 150px;
 
     .header__left-side {
       .header__left-side__head {
@@ -40,10 +40,20 @@
     top: -40px;
     width: 100%;
     height: 100%;
-    background-color: #ececec;
+    background-color: $backgroundColor;
     z-index: -1;
     transform: skewY(-6deg);
     transform-origin: top left;
+  }
+  .down{
+    text-align: center;
+    cursor: pointer;
+    .fa-angles-down{
+      font-size: 30px;
+      color: $blueColor;
+      animation: bounce 1.5s infinite;
+      
+    }
   }
 }
 
@@ -85,7 +95,7 @@
   }
 
   50% {
-    top: -50px
+    top: -60px
   }
 }
 @keyframes bounce {

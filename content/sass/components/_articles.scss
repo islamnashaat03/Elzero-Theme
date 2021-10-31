@@ -1,0 +1,25 @@
+.home-page {
+  .articles {
+    padding-top: $padding;
+    .articles-wrapper{
+      display: grid;
+      grid-template-columns: repeat(auto-fill , minmax(250px  , 1fr));
+      gap: 40px;
+      .card{
+        &:hover{
+          box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+          transform: translateY(-10px);
+          transition: .3s;
+          .fa-right-long{
+            animation:bounce-right .6s linear infinite ;
+          }
+        }
+      }
+      @keyframes bounce-right {
+        100% {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}

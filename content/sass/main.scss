@@ -1,8 +1,16 @@
 // @import '../../node_modules/normalize.css/normalize.css';
 @import './abstract/variables';
 @import './abstract/generic';
+@import './components/scrolltotop';
 @import './components/navbar';
 @import './layout/header';
+@import './components/main-title.scss';
+@import './components/card.scss';
+@import './components/articles.scss';
+@import './components/gallery';
+// @import ' ';
+// @import ' ';
+// @import ' ';
 // @import ' ';
 // @import ' ';
 // @import ' ';

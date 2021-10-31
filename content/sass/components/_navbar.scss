@@ -31,14 +31,14 @@
     align-items: center;
     width: 31px;
     height: 21px;
-    color: red;
+    color: $blueColor;
     transition: .3s;
     transform: rotate(0deg);
 
     .bar {
       height: 3px;
       width: 100%;
-      background-color: red;
+      background-color: $blueColor;
       transform: rotate(0deg);
       transition: $transtion;
 
