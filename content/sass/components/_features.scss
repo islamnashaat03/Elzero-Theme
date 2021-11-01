@@ -1,0 +1,173 @@
+.home-page {
+  .features {
+    padding-top: $padding;
+    padding-bottom: $padding;
+
+    .features-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+
+      .card {
+        border: 1px solid #ccc;
+        text-align: center;
+
+        .card-img {
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background-color: transparent;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 0px 0px 150px 500px;
+            border-color: transparent transparent white transparent;
+            bottom: 0;
+            right: 0;
+            transition: $transtion;
+          }
+        }
+
+        .card-body {
+          padding: 0;
+
+          .card-body-title {
+            position: relative;
+            font-size: 40px;
+            width: fit-content;
+            margin: auto;
+            color: black;
+
+            &::after {
+              content: "";
+              position: absolute;
+              height: 5px;
+              width: calc(100% - 30px);
+              // background-color: transparent;
+              bottom: 0;
+              left: 15px;
+            }
+          }
+
+          .card-body-paragragh {
+            line-height: 2;
+            font-size: 20px;
+            margin: 30px 0;
+            padding: 25px;
+            color: #777;
+          }
+        }
+
+        .card-btn {
+          margin: 0 auto 30px;
+          padding: 2px 30px;
+          border: 3px solid red;
+          font-size: 22px;
+          font-weight: bold;
+          color: inherit;
+          display: block;
+          width: fit-content;
+          border-radius: 6px;
+          transition: $transtion;
+          background-position-x: 0px;
+        }
+
+        &:hover {
+          .card-img {
+            &::after {
+              border-width: 170px 500px 150px 0px;
+              border-color: transparent transparent white transparent;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              transition: $transtion;
+            }
+          }
+
+          .card-btn {
+            color: #fff;
+            background-position: left bottom;
+
+          }
+        }
+      }
+
+      .quality {
+        .card-img {
+          &::before {
+            background-color: rgb(244 64 54 / 60%);
+          }
+        }
+
+        .card-body-title {
+          &::after {
+            background-color: red;
+          }
+        }
+
+        .card-btn {
+          border-color: red;
+          color: red;
+          background: linear-gradient(to right, red 50%, white 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+        }
+      }
+
+      .time {
+        .card-img {
+          &::before {
+            background-color: rgb(0 150 136 / 60%);
+          }
+        }
+
+        .card-body-title {
+          &::after {
+            background-color: #009688;
+          }
+        }
+
+        .card-btn {
+          border-color: #009688;
+          color: #009688;
+          background: linear-gradient(to right, #009688 50% , white 50%) ;
+          background-position: right bottom;
+          background-size: 200% 100%;
+        }
+      }
+
+      .passion {
+        .card-img {
+          &::before {
+            background-color: rgb(3 169 244 / 60%);
+          }
+        }
+
+        .card-body-title {
+          &::after {
+            background-color: #03a9f4;
+          }
+        }
+
+        .card-btn {
+          border-color: #03a9f4;
+          color: #03a9f4;
+          background: linear-gradient(to right, #03a9f4 50% , white 50%) ;
+          background-position: right bottom;
+          background-size: 200% 100%;
+        }
+      }
+    }
+  }
+}

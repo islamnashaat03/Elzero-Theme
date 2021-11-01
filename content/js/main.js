@@ -22,7 +22,7 @@ navButton.addEventListener("click", function () {
   // START SCROLL TO TOP BUTTON
   let span = document.querySelector(".up");
   window.onscroll = () => {
-    if (scrollY >= 800) {
+    if (scrollY >= 700) {
       span.classList.add("active");
     } else {
       span.classList.remove("active");

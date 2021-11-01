@@ -9,7 +9,7 @@
         &:hover{
           box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
           transform: translateY(-10px);
-          transition: .3s;
+          transition: $transtion;
           .fa-right-long{
             animation:bounce-right .6s linear infinite ;
           }
