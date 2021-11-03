@@ -1,9 +1,9 @@
 .main-title {
   text-align: center;
-  border: 3px solid black;
+  border: 2px solid black;
   width: fit-content;
-  margin: auto;
-  padding: 10px 20px;
+  margin: 0 auto 80px;
+  padding: 5px 20px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -12,8 +12,8 @@
   align-items: center;
   transition: $transtion;
   z-index: 1;
-  margin-bottom: 50px;
-  &::after{
+
+  &::after {
     content: "";
     width: 12px;
     height: 12px;
@@ -23,7 +23,8 @@
     right: -30px;
     opacity: 1;
   }
-  &::before{
+
+  &::before {
     content: "";
     width: 12px;
     height: 12px;
@@ -33,49 +34,56 @@
     left: -30px;
     opacity: 1;
   }
-  &:hover{
+
+  &:hover {
     color: #fff;
     border: 2px solid #fff;
     transition-delay: .5s;
-    &::after{
+
+    &::after {
       z-index: -1;
       animation: move-right .5s linear forwards;
     }
-    &::before{
+
+    &::before {
       z-index: -1;
       animation: move-left .5s linear forwards;
     }
   }
-  
+
 }
 
 @keyframes move-left {
-  50%{
+  50% {
     left: 0;
     width: 12px;
     height: 12px;
   }
-  100%{
-    left:0;
-    border-radius:0;
-    width: 55%;
-    height: 100%
-  }
-}
-@keyframes move-right {
-  50%{
-    right: 0;
-    width: 12px;
-    height: 12px;
-  }
-  100%{
-    right:0;
-    border-radius:0;
+
+  100% {
+    left: 0;
+    border-radius: 0;
     width: 55%;
     height: 100%
   }
 }
 
-body{
-  height: 5000px;
+@keyframes move-right {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 55%;
+    height: 100%
+  }
+}
+@media (max-width:600px) {
+  .main-title{
+    font-size: 24px;
+  }
 }

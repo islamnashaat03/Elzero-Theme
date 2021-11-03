@@ -1,0 +1,33 @@
+.H-card {
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  border-radius: 6px;
+
+  .H-card-title {
+    margin: 0 0 10px;
+  }
+
+  .H-card-subtitle {
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .H-card-content {
+    line-height: 1.5;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  img {
+    position: absolute;
+    top: -55px;
+    right: -10px;
+    border-radius: 50%;
+    border: 10px solid $backgroundColor;
+    width: 100px;
+  }
+}

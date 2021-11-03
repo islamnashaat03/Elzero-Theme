@@ -1,23 +1,23 @@
-window.onload = function(){
+window.onload = function () {
   let toggleBtn = document.querySelector(".toggle-btn");
   let navLinks = document.querySelector(".navbar__links");
 
-toggleBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 
-let animating = false;
-let navButton = document.querySelector(".toggle-btn");
+  let animating = false;
+  let navButton = document.querySelector(".toggle-btn");
 
-navButton.addEventListener("click", function () {
-  if (!animating) {
-    animating = true;
-    this.classList.toggle("open");
-    setTimeout(function () {
-      animating = false;
-    }, 300);
-  }
-});
+  navButton.addEventListener("click", function () {
+    if (!animating) {
+      animating = true;
+      this.classList.toggle("open");
+      setTimeout(function () {
+        animating = false;
+      }, 300);
+    }
+  });
 
   // START SCROLL TO TOP BUTTON
   let span = document.querySelector(".up");
@@ -35,7 +35,5 @@ navButton.addEventListener("click", function () {
     })
   }
 
-// END SCROLL TO TOP BUTTON
+  // END SCROLL TO TOP BUTTON
 }
-
-

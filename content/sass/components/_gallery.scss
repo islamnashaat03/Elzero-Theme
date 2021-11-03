@@ -1,14 +1,17 @@
-.home-page{
-  .gallery{
+.home-page {
+  .gallery {
     padding-top: $padding;
     padding-bottom: $padding;
-    .gallery-wrapper{
+
+    .gallery-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 40px;
-      .card{
+
+      .card {
         overflow: hidden;
-        .card-img{
+
+        .card-img {
           padding: 10px;
           transition: $transtion;
           transform: scale(1);
@@ -18,7 +21,8 @@
           position: relative;
           transition: $transtion;
           ;
-          &::before{
+
+          &::before {
             content: "";
             position: absolute;
             width: 0px;
@@ -28,13 +32,15 @@
             background-color: #ececec7d;
             transition: $transtion;
           }
-          &:hover{
-            transform:rotate(5deg) scale(1.2);
+
+          &:hover {
+            transform: rotate(5deg) scale(1.2);
             transition: $transtion;
-            &::before{
+
+            &::before {
               // opacity: 1;
               animation: flashing .7s;
-              
+
             }
           }
         }
@@ -42,11 +48,15 @@
     }
   }
 }
+
 @keyframes flashing {
-  0% , 40% {
+
+  0%,
+  40% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     opacity: 0;
     width: 200%;
     height: 200%;

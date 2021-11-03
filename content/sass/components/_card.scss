@@ -1,36 +1,43 @@
-.card{
+.card {
   // border: 1px solid #fff;
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
   border-radius: 6px;
   background-color: #fff;
   transform: translateY(0);
   transition: $transtion;
-  .card-img{
+
+  .card-img {
     margin: 0;
   }
-  .card-body{
+
+  .card-body {
     padding: 20px;
-    .card-body-title{
+
+    .card-body-title {
       // text-transform: uppercase;
       font-weight: bold;
     }
-    .card-body-paragragh{
-      color:#777 ;
+
+    .card-body-paragragh {
+      color: #777;
       line-height: 1.5;
     }
 
-  }  
-  .card-link{
+  }
+
+  .card-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-top: 1px solid #e6e6e7 ;
-    a{
+    border-top: 1px solid #e6e6e7;
+
+    a {
       font-weight: bold;
       color: $blueColor;
     }
-    .fa-right-long{
+
+    .fa-right-long {
       color: $blueColor;
     }
   }

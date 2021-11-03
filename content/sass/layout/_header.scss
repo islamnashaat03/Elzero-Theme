@@ -1,6 +1,7 @@
 .header {
   position: relative;
   padding-bottom: $padding;
+
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -45,14 +46,16 @@
     transform: skewY(-6deg);
     transform-origin: top left;
   }
-  .down{
+
+  .down {
     text-align: center;
     cursor: pointer;
-    .fa-angles-down{
+
+    .fa-angles-down {
       font-size: 30px;
       color: $blueColor;
       animation: bounce 1.5s infinite;
-      
+
     }
   }
 }
@@ -70,17 +73,17 @@
 @media screen and (max-width:992px) {
   .header {
     .container {
-      display: flex;  
+      display: flex;
       align-items: center;
       padding-bottom: 90px;
       justify-content: center;
       min-height: calc(100vh - 72px);
       text-align: center;
-    
+
 
       .header__left-side {
         .header__left-side__head {
-          font-size: calc((40px + (46 - 40) * ((100vw - 992px) / (1366 - 992 ))));
+          font-size: calc((40px + (46 - 40) * ((100vw - 992px) / (1366 - 992))));
         }
       }
     }
@@ -98,11 +101,20 @@
     top: -60px
   }
 }
+
 @keyframes bounce {
-  0% , 10% ,20% ,50% ,80% ,100%{
+
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
-  } 
-  40% ,60% {
+  }
+
+  40%,
+  60% {
     transform: translateY(-15px);
   }
 }

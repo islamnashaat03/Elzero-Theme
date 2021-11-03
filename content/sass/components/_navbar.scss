@@ -4,7 +4,8 @@
   position: relative;
   position: relative;
   margin-bottom: 30px;
-  .container{
+
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,6 +91,7 @@
     ul {
       display: flex;
       text-align: $end;
+
       // gap: 60px;
       li {
         a {
@@ -98,6 +100,7 @@
           font-size: 18px;
           position: relative;
           padding: 12px 30px;
+
           &::after {
             content: "";
             position: absolute;
@@ -108,15 +111,17 @@
             top: 0px;
             transition: $transtion;
           }
-          &:hover{
+
+          &:hover {
             background-color: #FAFAFA;
             color: $hoverColor;
-            
+
           }
+
           &:hover::after {
             color: $hoverColor;
             width: 100%;
-            
+
           }
         }
       }

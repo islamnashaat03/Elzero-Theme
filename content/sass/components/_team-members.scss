@@ -1,0 +1,109 @@
+.home-page {
+  .team-members {
+    padding: $padding 0;
+
+    .team-members-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+
+      .card {
+        position: relative;
+        border: 0;
+        box-shadow: none;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background: #87696921;
+          width: calc(100% - 60px);
+          z-index: -1;
+          border-radius: 10px;
+          border-radius: 10px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 100%;
+          background-color: $backgroundColor;
+          transition: $transtion;
+          z-index: -2;
+          border-radius: 10px;
+        }
+
+        .card-data {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 60px;
+          img {
+            width: calc(100% - 60px);
+            border-radius: 10px;
+            transition: $transtion;
+          }
+
+          .social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 60px;
+
+            .social-link {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #777;
+              transition: $transtion;
+              width: 60px;
+              height: 30px;
+              &:hover {
+                color: $blueColor;
+                transition: $transtion;
+              }
+            }
+          }
+        }
+
+        .card-info {
+          padding-left: 80px;
+
+          h3 {
+            color: $blueColor;
+            margin: 5px 0 ;
+          }
+
+          p {
+            margin: 5px 0 15px  ;
+          }
+        }
+        &:hover{
+          img{
+            filter: grayscale(100%);
+            transition: $transtion;
+          }
+          &::after{
+            width: calc(100% - 60px);
+            transition: $transtion;
+            z-index: -2;
+            border-radius: 10px;
+            background-color: #e4e4e4;
+          }
+          .card-info{
+            h3{
+              color: #777;
+            }
+          }
+        }
+      }
+    }
+  }
+}
