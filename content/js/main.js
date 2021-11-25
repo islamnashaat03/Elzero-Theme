@@ -20,35 +20,50 @@ window.onload = function () {
   });
 
   // START SCROLL TO TOP BUTTON
-  let span = document.querySelector(".up");
-  window.onscroll = () => {
-    if (scrollY >= 700) {
-      span.classList.add("active");
-    } else {
-      span.classList.remove("active");
-    }
-  };
-  span.onclick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
+  // let scrollIcon = document.querySelector(".up");
+  // window.onscroll = () => {
+  //   if (scrollY >= 700) {
+  //     console.log('haaai', scrollY)
+  //     scrollIcon.classList.add("active");
+  //   } else {
+  //     scrollIcon.classList.remove("active");
+  //   }
+  // };
+  // scrollIcon.onclick = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
   // END SCROLL TO TOP BUTTON
 
   // START SKILLS SCROLl
   let ourSkills = document.getElementById("ourSkills");
-  let spans = document.querySelectorAll(".the-progress");
+  let skills = document.querySelectorAll(".the-progress");
+  let scrollIcon = document.querySelector(".up");
 
-  window.onscroll = function () {
-    if (window.scrollY >= ourSkills.offsetTop - 300) {
-      spans.forEach((span) => {
-        span.style.width = span.dataset.width;
+  window.onscroll = () => {
+    if (scrollY >= 700) {
+      console.log('haaai', scrollY)
+      scrollIcon.classList.add("active");
+    } else {
+      scrollIcon.classList.remove("active");
+    }
+    // };
+    scrollIcon.onclick = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+    if (window.scrollY >= ourSkills.offsetTop - 200) {
+      console.log('skillllllllsss', scrollY)
+      skills.forEach((skill) => {
+        skill.style.width = skill.dataset.width;
       });
     }
   };
-  // END SKILLS SCROLL
+
   // START TIMER
   let countDownDate = new Date("dec 25 ,2021").getTime();
   let counter = setInterval(() => {
