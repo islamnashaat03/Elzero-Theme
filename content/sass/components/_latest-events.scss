@@ -1,0 +1,127 @@
+.latest-events {
+  padding: $padding;
+
+  .latest-events-wrapper {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      width: 450px;
+    }
+
+    .info {
+      flex: 1;
+      text-align: center;
+
+      .timer {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+        .unit {
+          border: 1px solid #d4d4d4;
+          text-align: center;
+          border-radius: 6px;
+          width: fit-content;
+          // flex: 1;
+
+          span {
+            display: block;
+            padding: 8px 10px;
+          }
+
+          .time {
+            font-size: 30px;
+            font-size: calc((24px + (30 - 24) * ((100vw - 1366px) / (1920 - 1366))));
+            color: $blueColor;
+            font-weight: bold;
+            border-bottom: 1px solid #d4d4d4;
+            padding: 15px;
+          }
+        }
+      }
+
+      h2 {
+        margin: 40px 0 0;
+        font-size: 30px;
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 19px;
+        color: #777;
+      }
+    }
+
+    .subscribe {
+      width: 100%;
+      margin-top: 50px;
+
+      form {
+        margin: 20px auto;
+        background-color: #f6f5f5;
+        border-radius: 50px;
+        display: flex;
+        gap: 20px;
+        padding: 30px 40px;
+        flex: 1;
+        width: 50%;
+        margin: auto;
+
+        input {
+          height: 30px;
+          border-radius: 50px;
+          padding: 30px;
+          border: 0;
+          caret-color: $blueColor;
+          outline: none;
+          flex: 2;
+        }
+
+        .btn {
+          border-radius: 50px;
+          border: none;
+          background-color:$blueColor;
+          color: #fff;
+          font-weight: bold;
+          padding: 20px;
+          cursor: pointer;
+          transition: $transtion;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .latest-events {
+    .latest-events-wrapper {
+    .subscribe{
+      form{
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    }
+  }
+}
+@media only screen and (max-width:991px) {
+  .latest-events {
+    .latest-events-wrapper {
+      flex-direction: column;
+    }
+  }
+}
+
+// @media (min-width:768px) {
+//   .latest-events{
+//     .latest-events-wrapper{
+//       .info{
+//         width: 45%;
+//       }
+//     }
+//   }
+// }

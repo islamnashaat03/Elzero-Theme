@@ -1,6 +1,6 @@
 .home-page {
   .team-members {
-    padding: $padding 0;
+    padding: $padding;
 
     .team-members-wrapper {
       display: grid;
@@ -43,6 +43,7 @@
           align-items: center;
           justify-content: space-between;
           padding-top: 60px;
+
           img {
             width: calc(100% - 60px);
             border-radius: 10px;
@@ -65,6 +66,7 @@
               transition: $transtion;
               width: 60px;
               height: 30px;
+
               &:hover {
                 color: $blueColor;
                 transition: $transtion;
@@ -78,27 +80,30 @@
 
           h3 {
             color: $blueColor;
-            margin: 5px 0 ;
+            margin: 5px 0;
           }
 
           p {
-            margin: 5px 0 15px  ;
+            margin: 5px 0 15px;
           }
         }
-        &:hover{
-          img{
+
+        &:hover {
+          img {
             filter: grayscale(100%);
             transition: $transtion;
           }
-          &::after{
+
+          &::after {
             width: calc(100% - 60px);
             transition: $transtion;
             z-index: -2;
             border-radius: 10px;
             background-color: #e4e4e4;
           }
-          .card-info{
-            h3{
+
+          .card-info {
+            h3 {
               color: #777;
             }
           }

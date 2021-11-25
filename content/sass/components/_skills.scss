@@ -1,0 +1,63 @@
+.home-page {
+  .our-skills {
+    padding: $padding;
+
+    .skills-wrapper {
+      display: flex;
+
+      // justify-content: space-between;
+      .skills {
+        text-align: left;
+        flex: 1;
+
+        .skill {
+          margin: 15px 0;
+
+          h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+              border-radius: 6px;
+              border: 1px solid #ccc;
+              font-size: 12px;
+              font-weight: bold;
+              padding: 0px 5px;
+              margin: 10px 0;
+              color: $blueColor;
+            }
+          }
+
+          .progress {
+            height: 30px;
+            background-color: #eee;
+            position: relative;
+
+            .the-progress {
+              position: absolute;
+              background-color: $blueColor;
+              left: 0;
+              // width: 0;
+              z-index: 12;
+              height: 100%;
+              transition: $transtion;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:991px) {
+  .home-page {
+    .our-skills {
+      .skills-wrapper {
+        .skills-img {
+          display: none;
+        }
+      }
+    }
+  }
+}
