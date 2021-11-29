@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   z-index: 30;
+  transition: .5s;
 
   img {
     width: 25px;
@@ -21,7 +22,6 @@
 
 .up.active {
   right: 15px;
-
 }
 
 @media only screen and (max-width:767px) {

@@ -1,0 +1,116 @@
+.discount {
+  padding: $padding;
+  padding-bottom: 0;
+
+  .discount-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    gap: 20px;
+
+    .info {
+      background-image: url(../images/discount-background1.jpg);
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      flex: 1 1 48%;
+
+      .content {
+        text-align: center;
+        padding: 10px;
+
+        h2 {
+          font-size: 38px;
+          letter-spacing: -2px;
+          margin: 20px 0;
+        }
+
+        p {
+          line-height: 1.6;
+          font-size: 18px;
+          max-width: 500px;
+          margin: 15px 0;
+        }
+
+        img {
+          width: 300px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(23 135 224 / 97%);
+        z-index: -1;
+      }
+
+    }
+
+    .form {
+      flex: 1 1 48%;
+      background-color: #fff;
+      padding: 10px;
+      height: 100%;
+      h2{
+        text-align: center;
+        margin: 15px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        height: 100%;
+
+        .input {
+          border: 0;
+          background-color: #fffcfc52;
+          padding: 10px;
+          outline: 0;
+          caret-color: $blueColor;
+          width: 75%;
+          border-bottom: 2px solid #f9f9f9;
+          // transition: $transtion;
+          &:focus{
+            border-bottom:2px solid $hoverColor;
+            transition: $transtion;
+          }
+        }
+        textarea{
+          resize: none;
+          background-color: #fffcfc52;
+          padding: 10px;
+          outline: 0;
+          caret-color: $blueColor;
+          width: 75%;
+          border: 2px solid #f9f9f9;
+          &:focus{
+            border: 2px solid $hoverColor;
+            transition: $transtion;
+          }
+        }
+        button{
+          background-color: $blueColor;
+          border: #fff;
+          padding: 10px 20px;
+          width: 75%;
+          font-weight: bold;
+          font-size: 18px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -44,7 +44,7 @@ window.onload = function () {
 
   window.onscroll = () => {
     if (scrollY >= 700) {
-      console.log('haaai', scrollY)
+      // console.log('haaai', scrollY)
       scrollIcon.classList.add("active");
     } else {
       scrollIcon.classList.remove("active");
@@ -57,7 +57,7 @@ window.onload = function () {
       });
     };
     if (window.scrollY >= ourSkills.offsetTop - 200) {
-      console.log('skillllllllsss', scrollY)
+      // console.log('skillllllllsss', scrollY)
       skills.forEach((skill) => {
         skill.style.width = skill.dataset.width;
       });

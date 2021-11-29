@@ -1,0 +1,127 @@
+footer {
+  background-color: #191919;
+  // color: #fff;
+  padding: 70px 0 0;
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+
+    .box {
+      h2 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 35px;
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+
+        a {
+          background-color: #313131;
+          color: #b9b9b9;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          transition: $transtion;
+
+          &:hover {
+            background-color: $hoverColor;
+          }
+        }
+      }
+
+      p {
+        color: #b9b9b9;
+        margin-bottom: 40px;
+      }
+
+      .links {
+        .link {
+          padding: 15px 0;
+          transition: $transtion;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #444;
+          }
+
+          a {
+            color: #b9b9b9;
+
+            &::before {
+              font-family: "Font Awesome 5 Free";
+              content: "\F101";
+              font-weight: 900;
+              margin-right: 10px;
+              color: $blueColor;
+            }
+          }
+
+          &:hover {
+            padding-left: 10px;
+            transition: $transtion;
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        // justify-content: space-between;
+        height: 100%;
+
+        .info {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          color: #b9b9b9;
+
+          .numvers {
+            display: block;
+          }
+
+          .text {
+            display: block;
+          }
+
+          .svg-inline--fa {
+            font-size: 25px;
+            color: $blueColor;
+          }
+        }
+      }
+
+      .footer-gallery {
+        img {
+          width: 78px;
+          border: 3px solid white;
+          margin: 2px;
+        }
+      }
+    }
+  }
+  .copyright{
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #444;
+    padding: 20px;
+    margin: 50px 0 0;
+    .fa-heart{
+      color: red;
+    }
+  }
+}
