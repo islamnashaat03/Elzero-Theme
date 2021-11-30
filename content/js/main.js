@@ -19,24 +19,13 @@ window.onload = function () {
     }
   });
 
-  // START SCROLL TO TOP BUTTON
-  // let scrollIcon = document.querySelector(".up");
-  // window.onscroll = () => {
-  //   if (scrollY >= 700) {
-  //     console.log('haaai', scrollY)
-  //     scrollIcon.classList.add("active");
-  //   } else {
-  //     scrollIcon.classList.remove("active");
-  //   }
-  // };
-  // scrollIcon.onclick = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
-  // END SCROLL TO TOP BUTTON
-
+  // STRAT OTHER LINKS BUTTON
+  let megaMenu = document.querySelector(".mega-menu");
+  document.querySelector(".other-links").addEventListener("click", () => {
+    megaMenu.classList.toggle("active");
+  });
+  document.querySelector(".fa-times").onclick = () => {megaMenu.classList.remove("active");}
+  // END OTHER LINKS BUTTON
   // START SKILLS SCROLl
   let ourSkills = document.getElementById("ourSkills");
   let skills = document.querySelectorAll(".the-progress");

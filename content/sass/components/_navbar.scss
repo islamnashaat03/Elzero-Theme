@@ -61,33 +61,29 @@
       transition: $transtion;
       transform-origin: right center;
     }
-  }
-
-  .toggle-btn.open {
-
-    // transform: rotateY(180deg);
-    .bar--1 {
-      transform: rotate(-45deg);
-      transform-origin: right center;
-      position: absolute;
-      top: -2px;
-      right: 0px;
-    }
-
-    .bar--2 {
-      display: none;
-      transform-origin: right center;
-    }
-
-    .bar--3 {
-      transform: rotate(45deg);
-      transform-origin: right center;
-      position: absolute;
-      bottom: -2px;
-      right: 0px;
+    &.open{
+      .bar--1 {
+        transform: rotate(-45deg);
+        transform-origin: right center;
+        position: absolute;
+        top: -2px;
+        right: 0px;
+      }
+  
+      .bar--2 {
+        display: none;
+        transform-origin: right center;
+      }
+  
+      .bar--3 {
+        transform: rotate(45deg);
+        transform-origin: right center;
+        position: absolute;
+        bottom: -2px;
+        right: 0px;
+      }
     }
   }
-
   .navbar__links {
     ul {
       display: flex;
@@ -136,10 +132,12 @@
 
       .other-links {
         width: fit-content;
+
         .mega-menu {
           display: flex;
           // display: none;
           align-items: center;
+          position: relative;
           position: absolute;
           left: -1500px;
           top: calc(100% + 1px);
@@ -151,7 +149,20 @@
           margin: auto;
           transition: $transtion;
           opacity: 0;
-
+          .fa-xmark{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: $blueColor;
+            font-size: 25px;
+            border: 1px solid $blueColor;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            padding: 0px;
+            cursor: pointer;
+            z-index: 3;
+          }
           .links {
             display: flex;
             flex-direction: column;
@@ -198,27 +209,35 @@
               }
             }
           }
-        }
-
-        &:hover {
-          .mega-menu {
+          &.active{
             opacity: 1;
-            // display: flex;
-
+            display: flex;
             left: 70px;
             transition: $transtion;
-
           }
         }
       }
     }
   }
 }
-
-
-
-
-
+@media (max-width:768px) {
+  .navbar{
+    .navbar__links{
+      ul{
+        .other-links{
+          .mega-menu{
+            &.active{
+              left: 0;
+            width: 100%;
+            flex-direction: column;
+            }
+            
+          }
+        }
+      }
+    }   
+  }
+}
 @media (max-width:991px) {
   .navbar {
     flex-direction: column;
