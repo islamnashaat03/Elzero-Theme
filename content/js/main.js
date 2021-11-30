@@ -19,17 +19,13 @@ window.onload = function () {
     }
   });
 
-  // STRAT OTHER LINKS BUTTON
-  let megaMenu = document.querySelector(".mega-menu");
-  document.querySelector(".other-links").addEventListener("click", () => {
-    megaMenu.classList.toggle("active");
-  });
-  document.querySelector(".fa-times").onclick = () => {megaMenu.classList.remove("active");}
-  // END OTHER LINKS BUTTON
   // START SKILLS SCROLl
   let ourSkills = document.getElementById("ourSkills");
   let skills = document.querySelectorAll(".the-progress");
   let scrollIcon = document.querySelector(".up");
+  let numbers = document.querySelectorAll(".number");
+  let stats = document.querySelector(".awesome-stats");
+  let started = false;
 
   window.onscroll = () => {
     if (scrollY >= 700) {
@@ -51,7 +47,25 @@ window.onload = function () {
         skill.style.width = skill.dataset.width;
       });
     }
+    if (window.scrollY >= stats.offsetTop - 200) {
+      // console.log("numbeeerrsss", scrollY);
+      if (!started) {
+        numbers.forEach((number) => startCount(number));
+      }
+      started = true;
+    }
+
+    function startCount(el) {
+      let target = el.dataset.target;
+      let count = setInterval(() => {
+        el.textContent++;
+        if (el.textContent == target) {
+          clearInterval(count);
+        }
+      }, 2000 / target);
+    }
   };
+
 
   // START TIMER
   let countDownDate = new Date("dec 25 ,2021").getTime();
@@ -79,3 +93,13 @@ window.onload = function () {
 
   // END TIMER
 };
+
+// STRAT OTHER LINKS BUTTON
+let megaMenu = document.querySelector(".mega-menu");
+document.querySelector(".other-links").addEventListener("click", () => {
+  megaMenu.classList.toggle("active");
+});
+document.querySelector(".fa-times").addEventListener("click", () => {
+  megaMenu.classList.remove("active");
+});
+// END OTHER LINKS BUTTON

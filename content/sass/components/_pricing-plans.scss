@@ -133,9 +133,15 @@
 
       }
     }
+  }
+}
 
-    .advanced {
-      margin-top: -20px;
+@media (min-width:1000px) {
+  .pricing-plans {
+    .pricing-plans-wrapper {
+      .advanced {
+        top: -20px;
+      }
     }
   }
 }

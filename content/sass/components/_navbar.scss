@@ -61,7 +61,8 @@
       transition: $transtion;
       transform-origin: right center;
     }
-    &.open{
+
+    &.open {
       .bar--1 {
         transform: rotate(-45deg);
         transform-origin: right center;
@@ -69,12 +70,12 @@
         top: -2px;
         right: 0px;
       }
-  
+
       .bar--2 {
         display: none;
         transform-origin: right center;
       }
-  
+
       .bar--3 {
         transform: rotate(45deg);
         transform-origin: right center;
@@ -84,6 +85,7 @@
       }
     }
   }
+
   .navbar__links {
     ul {
       display: flex;
@@ -149,7 +151,8 @@
           margin: auto;
           transition: $transtion;
           opacity: 0;
-          .fa-xmark{
+
+          .fa-xmark {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -163,6 +166,7 @@
             cursor: pointer;
             z-index: 3;
           }
+
           .links {
             display: flex;
             flex-direction: column;
@@ -209,10 +213,11 @@
               }
             }
           }
-          &.active{
+
+          &.active {
             opacity: 1;
             display: flex;
-            left: 70px;
+            left: 0;
             transition: $transtion;
           }
         }
@@ -220,24 +225,25 @@
     }
   }
 }
+
 @media (max-width:768px) {
-  .navbar{
-    .navbar__links{
-      ul{
-        .other-links{
-          .mega-menu{
-            &.active{
-              left: 0;
-            width: 100%;
-            flex-direction: column;
+  .navbar {
+    .navbar__links {
+      ul {
+        .other-links {
+          .mega-menu {
+            &.active {
+              width: 100%;
+              flex-direction: column;
             }
-            
+
           }
         }
       }
-    }   
+    }
   }
 }
+
 @media (max-width:991px) {
   .navbar {
     flex-direction: column;

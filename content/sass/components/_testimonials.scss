@@ -7,6 +7,15 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 40px;
+
+      .H-card {
+        transition: $transtion;
+
+        &:hover {
+          transform: translateY(-10px);
+          transition: $transtion;
+        }
+      }
     }
   }
 }
