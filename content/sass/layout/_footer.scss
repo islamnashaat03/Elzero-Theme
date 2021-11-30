@@ -114,16 +114,19 @@ footer {
       }
     }
   }
-  .copyright{
+
+  .copyright {
     text-align: center;
     color: #fff;
     border-top: 1px solid #444;
     padding: 20px;
     margin: 50px 0 0;
-    .fa-heart{
+
+    .fa-heart {
       color: $blueColor;
     }
-    a{
+
+    a {
       color: $blueColor;
       font-weight: bold;
       text-decoration: underline;
