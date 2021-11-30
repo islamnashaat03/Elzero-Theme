@@ -95,12 +95,18 @@
 
       // gap: 60px;
       li {
-        a {
+        .nav-link {
           color: #040000;
           transition: $transtion;
           font-size: 18px;
           position: relative;
           padding: 12px 30px 11px;
+          display: flex;
+          align-items: center;
+
+          .fa-chevron-down {
+            margin-left: 10px;
+          }
 
           &::after {
             content: "";
@@ -125,10 +131,90 @@
 
           }
         }
+
+      }
+
+      .other-links {
+        width: fit-content;
+        .mega-menu {
+          display: flex;
+          // display: none;
+          align-items: center;
+          position: absolute;
+          left: -1500px;
+          top: calc(100% + 1px);
+          gap: 40px;
+          z-index: 11;
+          background: #fff;
+          width: 90%;
+          padding: 20px;
+          margin: auto;
+          transition: $transtion;
+          opacity: 0;
+
+          .links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 250px;
+
+            li:not(:last-child) {
+              border-bottom: 1px solid #e9e6e6;
+            }
+
+            li {
+              position: relative;
+              width: 100%;
+              z-index: 1;
+
+              &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                height: 100%;
+                background-color: #fafafa;
+                transition: $transtion;
+                width: 0;
+                z-index: -1;
+              }
+
+              a {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                color: $blueColor;
+                // z-index: 1;
+              }
+
+              &:hover {
+                &::before {
+                  width: 100%;
+                  transition: $transtion;
+                  z-index: -1;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .mega-menu {
+            opacity: 1;
+            // display: flex;
+
+            left: 70px;
+            transition: $transtion;
+
+          }
+        }
       }
     }
   }
 }
+
 
 
 
